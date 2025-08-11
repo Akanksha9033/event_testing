@@ -186,7 +186,7 @@ const CreateEvent = () => {
 
   const fetchEvents = async () => {
     try {
-      const res = await axios.get("https://edzestweb-6.onrender.com/api/events"); // ✅ fixed duplicated API
+      const res = await axios.get("https://event-testing.onrender.com/api/events"); // ✅ fixed duplicated API
       setEvents(res.data);
     } catch (err) {
       console.error("Error fetching events:", err);
@@ -253,7 +253,7 @@ const CreateEvent = () => {
 
     if (editingId) {
       await axios.put(
-        `https://edzestweb-6.onrender.com/api/events/${editingId}`,
+        `https://event-testing.onrender.com/api/events/${editingId}`,
         payload,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -262,7 +262,7 @@ const CreateEvent = () => {
       alert("Event updated successfully!");
     } else {
       await axios.post(
-        "https://edzestweb-6.onrender.com/api/events",
+        "https://event-testing.onrender.com/api/events",
         payload,
         {
           headers: { "Content-Type": "multipart/form-data" },
@@ -308,7 +308,7 @@ const CreateEvent = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`https://edzestweb-6.onrender.com/api/events/${id}`);
+      await axios.delete(`https://event-testing.onrender.com/api/events/${id}`);
       fetchEvents();
     } catch (err) {
       console.error("Error deleting event:", err);
