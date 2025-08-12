@@ -169,7 +169,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const API_BASE = "https://event-testing.onrender.com/api/events";
+const API_BASE = "https://event-testing-1.onrender.com/api/events";
 
 const CreateEvent = () => {
   const [formData, setFormData] = useState({
